@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'main_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -81,7 +82,8 @@ class _LoginPageState extends State<LoginPage> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // TODO: Handle login
+                  // 啟動 main_page.dart
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => MainPage()));
                 },
                 child: Text('Login in'),
                 style: ElevatedButton.styleFrom(primary: Colors.blue[900], onPrimary: Colors.white),
